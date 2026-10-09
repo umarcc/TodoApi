@@ -1,0 +1,67 @@
+:root{
+  --paper:#EEF3F1; --ink:#12263A; --teal:#0E7C7B; --signal:#F2A93B; --mist:#D5E1DE;
+  --display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+
+.top{display:flex;justify-content:space-between;align-items:center;max-width:68rem;margin:0 auto;padding:1.25rem 1.5rem}
+.logo{font-family:var(--display);font-weight:800;font-size:1.25rem;text-decoration:none;background:var(--ink);color:var(--paper);padding:.2rem .6rem;border-radius:.4rem}
+nav a{margin-left:1.5rem;text-decoration:none;font-weight:500}
+nav a:hover{text-decoration:underline;text-decoration-color:var(--teal);text-underline-offset:.35rem;text-decoration-thickness:2px}
+
+main>section{max-width:68rem;margin:0 auto;padding:4.5rem 1.5rem}
+h1,h2,h3{font-family:var(--display);line-height:1.1}
+h2{font-size:clamp(1.75rem,3vw,2.25rem);font-weight:700;margin-bottom:2rem}
+
+.hero{padding-top:4rem}
+h1{font-size:clamp(2.5rem,7vw,5rem);font-weight:800;max-width:15ch;letter-spacing:-.02em}
+.lead{font-size:1.25rem;max-width:34rem;margin:1.5rem 0 2.5rem}
+
+.pipeline{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.5rem 0;margin-bottom:2.5rem}
+.pipeline li{position:relative;padding:.6rem 1.1rem .6rem 1.6rem;font-weight:600;border:2px solid var(--ink);margin-right:-2px;background:var(--paper);animation:pass .5s ease forwards;animation-delay:var(--d)}
+.pipeline li:first-child{border-radius:.5rem 0 0 .5rem;padding-left:1.1rem}
+.pipeline li:last-child{border-radius:0 .5rem .5rem 0}
+.pipeline li::before{content:"";display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:var(--mist);margin-right:.6rem;animation:dot .3s ease forwards;animation-delay:var(--d)}
+@keyframes pass{to{background:var(--ink);color:var(--paper)}}
+@keyframes dot{to{background:var(--signal)}}
+
+.btn{display:inline-block;padding:.8rem 1.5rem;border:2px solid var(--ink);border-radius:.5rem;font-weight:600;text-decoration:none;margin-right:.75rem;transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn.primary:hover{background:var(--ink);border-color:var(--ink)}
+
+.about{border-top:2px solid var(--mist);display:grid;grid-template-columns:1fr 2fr;gap:2rem}
+.about h2{margin:0}
+.about-body p{max-width:42rem;margin-bottom:1.1rem}
+
+.project{padding:1.75rem 0;border-top:2px solid var(--mist);display:grid;grid-template-columns:1fr 2fr;gap:.5rem 2rem}
+.project h3{font-size:1.4rem;font-weight:700}
+.project .tags{grid-column:2;color:var(--teal);font-weight:600;font-size:.95rem}
+.lead-project{background:var(--ink);color:var(--paper);border:0;border-radius:.75rem;padding:2rem}
+.lead-project .tags{color:var(--signal)}
+
+.skill-groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:2rem}
+.skill-groups h3{font-size:1.15rem;margin-bottom:.75rem;border-bottom:3px solid var(--signal);display:inline-block;padding-bottom:.2rem}
+.skill-groups ul{list-style:none;padding:0}
+.skill-groups li{padding:.25rem 0}
+
+.contact{border-top:2px solid var(--mist)}
+.contact p{margin-bottom:1.5rem}
+
+footer{max-width:68rem;margin:0 auto;padding:2rem 1.5rem 3rem;border-top:2px solid var(--mist);font-size:.95rem}
+
+@media (max-width:42rem){
+  nav a{margin-left:1rem}
+  .about,.project{grid-template-columns:1fr}
+  .project .tags{grid-column:1}
+}
+@media (prefers-reduced-motion:reduce){
+  .pipeline li,.pipeline li::before{animation:none}
+  .pipeline li{background:var(--ink);color:var(--paper)}
+  .pipeline li::before{background:var(--signal)}
+}

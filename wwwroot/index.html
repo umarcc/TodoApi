@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Umar Tanvir | Software Developer</title>
+  <meta name="description" content="Portfolio of Umar Tanvir, a .NET developer who builds and ships web APIs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="logo" href="#top">UT</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1>Umar Tanvir builds APIs and gets them into production.</h1>
+      <p class="lead">I'm a .NET developer who cares about the whole path, from the first commit to a running site.</p>
+
+      <ol class="pipeline" aria-label="My delivery pipeline: commit, build, test, approve, deploy">
+        <li style="--d:0.3s">Commit</li>
+        <li style="--d:0.9s">Build</li>
+        <li style="--d:1.5s">Test</li>
+        <li style="--d:2.1s">Approve</li>
+        <li style="--d:2.7s">Deploy</li>
+      </ol>
+
+      <div class="actions">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <div class="about-body">
+        <p>I write C# and ASP.NET Core services, and I like it when a change I push shows up running a few minutes later without anyone babysitting it.</p>
+        <p>Recently I set up a full CI/CD flow in Azure DevOps: a self-hosted build agent, a release pipeline with approvals, and automatic deployment to IIS.</p>
+        <p>Replace this text with your own story, your team, and what you want to do next.</p>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <h2>Selected work</h2>
+      <article class="project lead-project">
+        <h3>TodoApi CI/CD pipeline</h3>
+        <p>Build, publish, approve and deploy an ASP.NET Core API to IIS using Azure DevOps and a self-hosted agent.</p>
+        <p class="tags">ASP.NET Core, Azure DevOps, IIS, PowerShell</p>
+      </article>
+      <article class="project">
+        <h3>Project two</h3>
+        <p>One sentence on the problem you solved and the result.</p>
+        <p class="tags">Add your stack here</p>
+      </article>
+      <article class="project">
+        <h3>Project three</h3>
+        <p>One sentence on the problem you solved and the result.</p>
+        <p class="tags">Add your stack here</p>
+      </article>
+    </section>
+
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <div class="skill-groups">
+        <div>
+          <h3>Build</h3>
+          <ul><li>C# and .NET</li><li>ASP.NET Core Web APIs</li><li>SQL Server</li></ul>
+        </div>
+        <div>
+          <h3>Ship</h3>
+          <ul><li>Azure DevOps pipelines</li><li>Release approvals</li><li>IIS hosting</li></ul>
+        </div>
+        <div>
+          <h3>Work with others</h3>
+          <ul><li>Git and pull requests</li><li>Code reviews</li><li>Clear documentation</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Have a project or a role in mind? Send me a message.</p>
+      <a class="btn primary" href="mailto:you@example.com">you@example.com</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Umar Tanvir. Deployed by my own pipeline.</p>
+  </footer>
+</body>
+</html>
