@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Umar Tanvir | Software Developer</title>
-  <meta name="description" content="Portfolio of Umar Tanvir, a .NET developer who builds and ships web APIs.">
+  <title>Umar Tanvir | .NET Developer</title>
+  <meta name="description" content="Portfolio of Umar Tanvir, a .NET developer who builds web APIs and automates how they reach production.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 </head>
 <body>
   <header class="top">
-    <a class="logo" href="#top">UT</a>
+    <a class="logo" href="#top" aria-label="Back to top">UT</a>
     <nav aria-label="Main">
       <a href="#about">About</a>
       <a href="#work">Work</a>
@@ -24,7 +24,7 @@
   <main id="top">
     <section class="hero">
       <h1>Umar Tanvir builds APIs and gets them into production.</h1>
-      <p class="lead">I'm a .NET developer who cares about the whole path, from the first commit to a running site.</p>
+      <p class="lead">I'm a .NET developer who looks after the whole path, from the first commit to a running site.</p>
 
       <ol class="pipeline" aria-label="My delivery pipeline: commit, build, test, approve, deploy">
         <li style="--d:0.3s">Commit</li>
@@ -43,28 +43,31 @@
     <section id="about" class="about">
       <h2>About</h2>
       <div class="about-body">
-        <p>I write C# and ASP.NET Core services, and I like it when a change I push shows up running a few minutes later without anyone babysitting it.</p>
-        <p>Recently I set up a full CI/CD flow in Azure DevOps: a self-hosted build agent, a release pipeline with approvals, and automatic deployment to IIS.</p>
-        <p>Replace this text with your own story, your team, and what you want to do next.</p>
+        <p>I write C# and ASP.NET Core services, and I like it when a change I push shows up running a few minutes later, with nobody copying files by hand.</p>
+        <p>This page is a small example. When I push a change to GitHub, an Azure DevOps pipeline builds it on my own agent, a release waits for my approval and my supervisor's, and then the site updates on IIS.</p>
+        <p>I enjoy turning slow, manual release steps into repeatable ones that a whole team can trust.</p>
       </div>
     </section>
 
     <section id="work" class="work">
       <h2>Selected work</h2>
+
       <article class="project lead-project">
-        <h3>TodoApi CI/CD pipeline</h3>
-        <p>Build, publish, approve and deploy an ASP.NET Core API to IIS using Azure DevOps and a self-hosted agent.</p>
+        <h3>CI/CD pipeline for an ASP.NET Core API</h3>
+        <p>A push to GitHub starts a build on a self-hosted agent, publishes an artifact, and creates a release. Two people approve it, then a script updates the IIS site and restarts the app pool.</p>
         <p class="tags">ASP.NET Core, Azure DevOps, IIS, PowerShell</p>
       </article>
+
       <article class="project">
-        <h3>Project two</h3>
-        <p>One sentence on the problem you solved and the result.</p>
-        <p class="tags">Add your stack here</p>
+        <h3>Weather forecast API</h3>
+        <p>A minimal API that returns a five-day forecast as JSON. It is the app this pipeline deploys, and it runs on the same site as this page.</p>
+        <p class="tags">.NET 10, minimal APIs, OpenAPI</p>
       </article>
+
       <article class="project">
-        <h3>Project three</h3>
-        <p>One sentence on the problem you solved and the result.</p>
-        <p class="tags">Add your stack here</p>
+        <h3>This portfolio</h3>
+        <p>A static page with no framework, served by the same API. Every edit I make goes through the pipeline above.</p>
+        <p class="tags">HTML, CSS, static files in ASP.NET Core</p>
       </article>
     </section>
 
@@ -73,23 +76,36 @@
       <div class="skill-groups">
         <div>
           <h3>Build</h3>
-          <ul><li>C# and .NET</li><li>ASP.NET Core Web APIs</li><li>SQL Server</li></ul>
+          <ul>
+            <li>C# and .NET</li>
+            <li>ASP.NET Core Web APIs</li>
+            <li>SQL Server</li>
+          </ul>
         </div>
         <div>
           <h3>Ship</h3>
-          <ul><li>Azure DevOps pipelines</li><li>Release approvals</li><li>IIS hosting</li></ul>
+          <ul>
+            <li>Azure DevOps build and release pipelines</li>
+            <li>Self-hosted build agents</li>
+            <li>IIS hosting and app pools</li>
+          </ul>
         </div>
         <div>
           <h3>Work with others</h3>
-          <ul><li>Git and pull requests</li><li>Code reviews</li><li>Clear documentation</li></ul>
+          <ul>
+            <li>Git and pull requests</li>
+            <li>Release approvals</li>
+            <li>Clear documentation</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section id="contact" class="contact">
       <h2>Contact</h2>
-      <p>Have a project or a role in mind? Send me a message.</p>
+      <p>Have a project or a role in mind? Send me an email, or look at my code on GitHub.</p>
       <a class="btn primary" href="mailto:you@example.com">you@example.com</a>
+      <a class="btn" href="https://github.com/umarcc" rel="noopener">GitHub</a>
     </section>
   </main>
 
